@@ -1,9 +1,9 @@
 // Dependencies
-const mysql = require("mysql");
-const mysql = require("mysql2");
+var mysql = require("mysql");
+var mysql2 = require("mysql2");
 
 // Express app
-const express = require("express")
+var express = require("express")
 
 // Set the port of our aplication 
 var port = process.env.PORT || 8080;
@@ -23,5 +23,5 @@ var connection = mysql.createConnection({
       return;
     }
    
-    console.log("'connected as id ' + connection.threadId");
+    console.log('connected as id ' + connection.threadId);
   });
