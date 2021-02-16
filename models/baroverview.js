@@ -1,7 +1,6 @@
 var Sequelize = require("sequelize");
 var sequelize = require("../config/connection.js");
-
-var menu = sequelize.define("menu", {
+var menu = sequelize.define('menu', {
   drink_name: Sequelize.STRING,
   price: Sequelize.DECIMAL(10,2),
   description: Sequelize.STRING
@@ -17,7 +16,6 @@ var menu = sequelize.define("menu", {
       console.error('error:', err);
     });
   })();
-
 menu.sync();
 
 module.export = menu;
