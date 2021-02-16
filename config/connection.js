@@ -1,24 +1,20 @@
-// Set up MySQL connection.
-const mysql = require("mysql2");
-const sequelize = require("sequelize");
-// const sequelize-cli = require("sequelize-cli");
-
-var connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "root",
-  database: "baroverview"
+// Dependencies
+var Sequelize = require("sequelize");
+// Creates mySQL connection using Sequelize, the empty string in the third argument spot is our password.
+const sequelize = new Sequelize('baroverview', 'root', 'root', {
+  host: 'localhost',
+  dialect: 'mysql',
+  port: 3306
 });
-
-// Make connection.
-connection.connect(function(err) {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-  console.log("connected as id " + connection.threadId);
-});
-
-// Export connection for our ORM to use.
-module.exports = connection;
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log('Connection has been established successfully.');
+  })
+  .catch(err => {
+    console.error('Unable to connect to the database:', err);
+  });
+// Exports the connection for other files to use
+// 1234567
+// 54321
+module.exports = sequelize;
