@@ -1,7 +1,7 @@
 // Dependencies
 var Sequelize = require("sequelize");
 // Creates mySQL connection using Sequelize, the empty string in the third argument spot is our password.
-const sequelize = new Sequelize('baroverview', 'root', 'root', {
+const sequelize = new Sequelize('baroverview', 'root', 'rootroot', {
   host: 'localhost',
   dialect: 'mysql',
   port: 3306

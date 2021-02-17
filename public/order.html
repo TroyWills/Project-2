@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tables Page</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 class="text-center"><span class="fa fa-fire"></span> Croconaw's Bar</h1>
+      <hr>
+      <h2 class="text-center">Tab Total</h2>
+      <br>
+
+      <div class="text-center">
+        <a href="pay tab.html"><button class="btn btn-lg btn-danger"><span class="fa fa-credit-card"></span> Place An Order</button></a>
+        <a href="home2.html"><button class="btn btn-lg btn-default"><span class="fa fa-home"></span></button></a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+
+        <!-- Find Drink Card -->     <!-- add drinks API  -->
+
+        <div class="card">
+          <div class="card-header">
+            <h4>Total</h4>
+          </div>
+          <div class="card-body">
+            <ul id="tableList" class="list-group"></ul>
+          </div>
+        </div>
+
+        <!-- Popular Drinks Card -->
+        <div class="card mt-4">
+          <div class="card-header">
+            <h4>Recent Drinks</h4>
+          </div>
+          <div class="card-body">
+            <ul id="waitList" class="list-group"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
