@@ -1,24 +1,34 @@
-// dependencies
-const express = require('express');
-const exphbs  = require('express-handlebars');
+// Our server dependencies 
+var express = require('express');
+var exphbs = require('express-handlebars');
+var router = express.Router();
 
-// sets our app listening port to 8080 (Heroku deployment)
-// const HTTP_PORT = process.env.PORT || 8080;
-const db = require("./models/baroverview");
+// Lets our app run on express 
+var app = express();
+var PORT = process.env.PORT || 8080;
 
-const app = express();
+var db = require("./models")
 
-app.engine('handlebars', exphbs());
-app.set('view engine', 'handlebars');
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.text());
+app.use(express.static("public"));
 
-app.get('/', function (req, res) {
-    res.render('home');
-});
+require("./routes/api-Routes")(app);
+// require("./routes/html-Routes")(app);
 
-app.listen(3000);
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');   
 
+// var barOverview = require('./config/connection.js');
+// barOverview(app, db);
 
+db.sequelize.sync({}).then(function () {
+     app.listen(PORT, function () {
+         console.log("App listening on PORT " + PORT);
+     });
+ });
 
-
+app.listen(3000)
 
 

@@ -1,12 +1,17 @@
 var db = require("../models")
 
 module.exports = function(app) {
-    // GET route for getting all of the posts
-    app.get("/api/menus", function(req, res) {
-      db.menus.findAll({})
-        .then(function(dbmenus) {
-          res.render(dbmenus);
-          console.log(dbmenus);
-        });
-    });
+    app.get("/", function(req, res) {
+    db.Menu.findAll({})
+    .then(function(dbMenu) {
+        console.log(dbMenu);
+    res.render("home", {dbMenu});
+    })
+    .catch(function(err){
+        console.log(err)
+    })
+    ;
+  });
 }
+
+

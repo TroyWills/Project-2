@@ -1,13 +1,10 @@
-// create ajax call 
+// creating ajax call
 
-$.ajax {
-    type: "GET",
-    URL: "/api/menus" + id
-  }).then(
-    function() {
-      console.log(menus);
-      // Reload the page to get the updated list
-      location.reload();
-    }
-  );
-});
+$(document).ready(function () {
+  // $.ajax({
+  //   method: "GET",
+  //   URL: "/api/Menus"
+  // }).then(function (drinkMenu) {
+  //   console.log(drinkMenu)
+  // })
+})
