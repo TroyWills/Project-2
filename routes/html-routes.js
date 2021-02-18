@@ -1,22 +1,10 @@
-// =============================================================
-var app = require("../models/baroverview.js");
-var router = express.router();
-var express = require("express";
-)
+// // Requiring path to so we can use relative routes to our HTML files
 
-// Routes
-// =============================================================
-module.exports = function(app) {
+// var path = require("path");
 
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/home2.html"));
-  });
-  app.get("/pay_tab", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/pay tab.html"));
-  });
+// module.exports = function(app) {
 
-  app.get("/order", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/order.html"));
-  });
-
-};
+//   app.get('/', function (req, res) {
+//     res.render("home")
+//   });
+// };
