@@ -8,6 +8,17 @@
       <p>Description: {{dataValues.description}}</p>
       <p>Ingredients: {{dataValues.ingredients}}</p>
       <p>Category: {{dataValues.category}}</p>
+      <button data-name="{{dataValues.drink_name}}" data-price="{{dataValues.price}}" class="place-order">Order</button>
     </li>
   {{/each}}
 </ul>
+
+<ul>
+  {{#each dbTab}}
+    <li>
+      <p>Name: {{dataValues.currentbill}}</p>
+      <p>Price: {{dataValues.drinklist}}</p>
+    </li>
+  {{/each}}
+</ul>
+
