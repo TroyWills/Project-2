@@ -87,7 +87,7 @@ var sequelize = require("../config/connection.js");
               description: 'Choose from our many house wines.' , 
               ingredients: 'Wine.', 
               category: 'wine' ,
-              image: 'https://cdn.shopify.com/s/files/1/0156/2938/5792/products/product-image-1287441452.jpg?v=1583314092'
+              images: 'https://cdn.shopify.com/s/files/1/0156/2938/5792/products/product-image-1287441452.jpg?v=1583314092'
             },
             {
               drink_name: 'PBR ', 
@@ -95,7 +95,7 @@ var sequelize = require("../config/connection.js");
               description: 'As requested from the famous Matty J, the famous (or infamous) PBR!' , 
               ingredients: 'A solution to a bad day in a can.', 
               category: 'classic drink',
-              image: 'https://media3.s-nbcnews.com/j/newscms/2018_46/2643221/181112-pbr-al-1054_2e4a5b33a86c258df79f0a21e527dd91.nbcnews-fp-1200-630.jpg'
+              images: 'https://media3.s-nbcnews.com/j/newscms/2018_46/2643221/181112-pbr-al-1054_2e4a5b33a86c258df79f0a21e527dd91.nbcnews-fp-1200-630.jpg'
             },
             ])
             .then(() => { 
