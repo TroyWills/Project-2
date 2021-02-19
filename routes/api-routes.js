@@ -27,11 +27,12 @@ itemsArr.push(req.body)
     })
   });
 
-    app.post("/", function(req, res) {
+    app.get("/api/drinklist", function(req, res) {
         db.Tab.findAll({})
         .then(function(dbTab) {
         console.log(dbTab);
-        res.render("home", {dbTab});
+        res.json(dbTab);
+        // res.render("home", {dbTab});
         })
         .catch(function(err){
         console.log(err)

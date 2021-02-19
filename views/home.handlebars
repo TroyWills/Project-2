@@ -1,5 +1,9 @@
 <h1> Here is our menu: </h1>
 
+<h3> drink list : {{dataValues.drinklist}} </h3>
+<ul id ="drink-list">
+  
+</ul>
 <ul>
   {{#each dbMenu}}
     <li>
@@ -9,17 +13,20 @@
       <p>Ingredients: {{dataValues.ingredients}}</p>
       <p>Category: {{dataValues.category}}</p>
       <img src="{{dataValues.images}}">
+      <br>
       <button data-name="{{dataValues.drink_name}}" data-price="{{dataValues.price}}" class="place-order">Order</button>
     </li>
   {{/each}}
 </ul>
 
-<ul>
+{{!-- <ul>
   {{#each dbTab}}
     <li>
       <p>Name: {{dataValues.currentbill}}</p>
       <p>Price: {{dataValues.drinklist}}</p>
     </li>
   {{/each}}
-</ul>
+</ul> --}}
+
+
 
