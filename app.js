@@ -15,13 +15,9 @@ app.use(express.text());
 app.use(express.static("public"));
 
 require("./routes/api-Routes")(app);
-// require("./routes/html-Routes")(app);
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');   
-
-// var barOverview = require('./config/connection.js');
-// barOverview(app, db);
 
 db.sequelize.sync({}).then(function () {
      app.listen(PORT, function () {
