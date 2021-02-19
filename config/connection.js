@@ -14,7 +14,5 @@ sequelize
   .catch(err => {
     console.error('Unable to connect to the database:', err);
   });
-// Exports the connection for other files to use
-// 1234567
-// 54321
+
 module.exports = sequelize;
