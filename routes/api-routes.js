@@ -13,22 +13,10 @@ module.exports = function(app) {
     ;
   });
 
-  app.get("/", function(req, res) {
-    db.Tab.findAll({})
-    .then(function(dbTab) {
-        console.log(dbTab);
-    res.render("home", {dbTab});
-    })
-    .catch(function(err){
-        console.log(err)
-    })
-    ;
-  });
-
-//   let itemsArr = []
+  let itemsArr = []
   app.post('/', function (req, res) {
     console.log("user data",req.body);
-    // itemsArr.push(req.body)
+itemsArr.push(req.body)
 
     db.Tab.create({
         currentbill: req.body.price,
@@ -37,5 +25,16 @@ module.exports = function(app) {
 
         res.json(result);
     })
-  })
+  });
+
+    app.post("/", function(req, res) {
+        db.Tab.findAll({})
+        .then(function(dbTab) {
+        console.log(dbTab);
+        res.render("home", {dbTab});
+        })
+        .catch(function(err){
+        console.log(err)
+    });
+});
 }
