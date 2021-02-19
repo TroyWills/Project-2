@@ -7,7 +7,8 @@ var sequelize = require("../config/connection.js");
       price: Sequelize.DECIMAL(10,2),
       description: Sequelize.STRING,
       ingredients: Sequelize.STRING,
-      category: Sequelize.STRING
+      category: Sequelize.STRING,
+      images: Sequelize.STRING
     });
     (async () => {
         await sequelize.sync({ force: false }); 
@@ -22,7 +23,7 @@ var sequelize = require("../config/connection.js");
               description: 'A tangy and refreshing must have after a long day!', 
               ingredients: 'Your favorite tequila, lime juice,lemon juice, agave syrup, angostura bitters, and egg white.', 
               category: 'cocktail',
-              images: ''
+              images: 'https://www.acouplecooks.com/wp-content/uploads/2020/04/Tequila-Sour-012.jpg'
             },
             { 
               drink_name: 'Rum and Coke', 
@@ -83,7 +84,7 @@ var sequelize = require("../config/connection.js");
             { 
               drink_name: 'Wine', 
               price: 15.00, 
-              description: 'Pick from our many house wines.' , 
+              description: 'Choose from our many house wines.' , 
               ingredients: 'Wine.', 
               category: 'wine' ,
               image: 'https://cdn.shopify.com/s/files/1/0156/2938/5792/products/product-image-1287441452.jpg?v=1583314092'
@@ -92,8 +93,8 @@ var sequelize = require("../config/connection.js");
               drink_name: 'PBR ', 
               price: 4.00, 
               description: 'As requested from the famous Matty J, the famous (or infamous) PBR!' , 
-              ingredients: 'Light rum, gold rum, Orange Curacao liqueur, almond syrup, lime juice, and dark rum.', 
-              category: 'cocktail',
+              ingredients: 'A solution to a bad day in a can.', 
+              category: 'classic drink',
               image: 'https://media3.s-nbcnews.com/j/newscms/2018_46/2643221/181112-pbr-al-1054_2e4a5b33a86c258df79f0a21e527dd91.nbcnews-fp-1200-630.jpg'
             },
             ])
@@ -106,6 +107,5 @@ var sequelize = require("../config/connection.js");
         });
       })();
     Menu.sync();
-
     return Menu
   }

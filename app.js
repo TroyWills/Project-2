@@ -13,6 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.text());
 app.use(express.static("public"));
+app.use(express.static("views/images"));
 
 require("./routes/api-Routes")(app);
 
