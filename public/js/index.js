@@ -5,7 +5,7 @@ $(document).ready(function () {
     // alert("working");
     let name = $(this).data("name");
     let price = $(this).data("price")
-    alert(name+price);
+    // alert(name+price);
 console.log(this);
     $.ajax({
       url:"/",
@@ -28,7 +28,7 @@ console.log(this);
     console.log(data);
     let ulEL = $("#drink-list");
     for (let i = 0; i < data.length; i++) {
-      let liEl = $("<li>")
+      let liEl = $("<p>")
       liEl.text(`${data[i].drinklist} : ${data[i].currentbill}` );
       ulEL.append(liEl)
     }
