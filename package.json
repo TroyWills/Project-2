@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "watch": "nodemon app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "seed": "node seeds.js"
   },
   "repository": {
     "type": "git",
